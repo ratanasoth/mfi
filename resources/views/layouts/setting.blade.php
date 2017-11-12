@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Vdoo MFI</title>
+    <title>Setting - Vdoo</title>
     <!-- Styles -->
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -32,20 +32,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/home')}}">Dashboard</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/sale')}}">Sale</a>
+                      <li class="nav-item">
+                <a class="nav-link" href="{{url('/loan')}}">Loan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/pos')}}">POS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/purchase')}}">Purchase</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/inventory')}}">Inventory</a>
+                <a class="nav-link" href="{{url('/pawn')}}">Pawn</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/accounting')}}">Accounting</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{{url('/parameter')}}">Parameter</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{url('/setting')}}">Settings <span class="sr-only">(current)</span></a>

@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Dashboard - Vdoo</title>
+    <title>Loan - Vdoo</title>
 
     <!-- Styles -->
     <!-- Bootstrap core CSS -->
@@ -29,11 +29,11 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url('/home')}}">Dashboard <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/loan')}}">Loan</a>
+                <a class="nav-link" href="{{url('/home')}}">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url('/loan')}}">Loan <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/pawn')}}">Pawn</a>
