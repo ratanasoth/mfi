@@ -89,6 +89,7 @@ Route::get("/district", "DistrictController@index");
 Route::get("/district/create", "DistrictController@create");
 Route::get("/district/edit/{id}", "DistrictController@edit");
 Route::get("/district/delete/{id}", "DistrictController@delete");
+Route::get("/district/get/{id}", "DistrictController@get");
 Route::post("/district/save", "DistrictController@save");
 Route::post("/district/update", "DistrictController@update");
 // commune
@@ -141,12 +142,12 @@ Route::get('/position/delete/{id}', "PositionController@delete");
 Route::post('/position/save', "PositionController@save");
 Route::post('/position/update', "PositionController@update");
 // provision
-Route::get('/provison', "ProvisionController@index");
-Route::get('/provison/create', "ProvisionController@create");
-Route::get('/provison/edit/{id}', "ProvisionController@edit");
-Route::get('/provison/delete/{id}', "ProvisionController@delete");
-Route::post('/provison/save', "ProvisionController@save");
-Route::post('/provison/update', "ProvisionController@update");
+Route::get('/provision', "ProvisionController@index");
+Route::get('/provision/create', "ProvisionController@create");
+Route::get('/provision/edit/{id}', "ProvisionController@edit");
+Route::get('/provision/delete/{id}', "ProvisionController@delete");
+Route::post('/provision/save', "ProvisionController@save");
+Route::post('/provision/update', "ProvisionController@update");
 // payment mood
 Route::get("/payment-mood", "PaymentMoodController@index");
 Route::get("/payment-mood/create", "PaymentMoodController@create");
