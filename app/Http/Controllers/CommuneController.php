@@ -48,4 +48,15 @@ class CommuneController extends Controller
              return redirect("/commune/create")->withInput();
          }
      }
+
+     public function delete($id)
+     {
+         $i = DB::table("communes")->where("id", $id)->update(["active"=>0]);
+         $page = @$_GET['page'];
+         if ($page>0)
+         {
+             return redirect('/commune?page='.$page);
+         }
+         return redirect('/commune');
+     }
 }

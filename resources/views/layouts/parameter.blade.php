@@ -108,7 +108,7 @@
                     <a class="nav-link" href="{{url('/commune')}}" id="commune">Commune</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/village')}}" id="village">Village</a>
+                    <a class="nav-link" href="{{url('/village')}}" id="menu_village">Village</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="{{url('/zone')}}" id="zone">Zone</a>
