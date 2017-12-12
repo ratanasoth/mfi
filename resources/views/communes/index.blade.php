@@ -12,7 +12,7 @@
                     <table class="tbl">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>&numero;</th>
                             <th>Code</th>
                             <th>Name</th>
                             <th>District</th>

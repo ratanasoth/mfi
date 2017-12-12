@@ -35,19 +35,48 @@ class VillageController extends Controller
          $data = array(
              "code" => $r->code,
              "name" => $r->name,
+             'commune_id' => $r->commune_id,
              "province_id" => $r->province_id,
              "district_id" => $r->district_id
          );
-         $i = DB::table("communes")->insert($data);
+         $i = DB::table("villages")->insert($data);
          if($i)
          {
-             $r->session()->flash("sms", "New commune has been created successfully!");
-             return redirect("/commune/create");
+             $r->session()->flash("sms", "New village has been created successfully!");
+             return redirect("/village/create");
          }
          else{
-             $r->session()->flash("sms1", "Fail to create new commune!");
-             return redirect("/commune/create")->withInput();
+             $r->session()->flash("sms1", "Fail to create new village!");
+             return redirect("/village/create")->withInput();
          }
+     }
+     public function edit($id)
+     {
+        $data["provinces"] = DB::table("provinces")->where("active",1)->orderBy("name")->get();
+        $data['village'] = DB::table('villages')->where('id', $id)->first();
+        $data['districts'] = DB::table('districts')->where('active', 1)->where('province_id', $data['village']->province_id)->get();
+        $data['communes'] = DB::table('communes')->where('active', 1)->where('district_id', $data['village']->district_id)->get();
+        return view('villages.edit', $data);        
+     }
+     public function update(Request $r)
+     {
+        $data = array(
+            "code" => $r->code,
+            "name" => $r->name,
+            'commune_id' => $r->commune_id,
+            "province_id" => $r->province_id,
+            "district_id" => $r->district_id
+        );
+        $i = DB::table('villages')->where('id', $r->id)->update($data);
+        if($i)
+        {
+            $r->session()->flash('sms', 'All changes have been saved!');
+            return redirect('/village/edit/'.$r->id);
+        }
+        else{
+            $r->session()->flash('sms1', 'Fail to save change!');
+            return redirect('/village/edit/'.$r->id);
+        }
      }
      public function delete($id)
      {

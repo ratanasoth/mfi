@@ -89,7 +89,10 @@
                     <a class="nav-link" href="{{url('/loan-product')}}" id="laon_product">Loan Product</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/payment-mood')}}" id="payment_mood">Payment Mood</a>
+                    <a class="nav-link" href="#" id="menu_loan_size">Loan Size</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/payment-mood')}}" id="menu_payment_mood">Payment Mood</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/provision')}}" id="provision">Provision</a>

@@ -41,14 +41,6 @@ Route::post("/role/update", "RoleController@update");
 //Auth::routes();
 Route::auth();
 Route::get('/home', 'HomeController@index')->name('home');
-// sale
-Route::get('/sale', "SaleController@index");
-// pos
-Route::get('/pos', "POSController@index");
-// purchase
-Route::get("/purchase", "PurchaseController@index");
-// inventory
-Route::get("/inventory", "InventoryController@index");
 // settings
 Route::get('/setting', "SettingController@index");
 // Accounting
@@ -94,6 +86,7 @@ Route::post("/district/save", "DistrictController@save");
 Route::post("/district/update", "DistrictController@update");
 // commune
 Route::get("/commune", "CommuneController@index");
+Route::get("/commune/get/{id}", "CommuneController@get");
 Route::get("/commune/create", "CommuneController@create");
 Route::get("/commune/edit/{id}", "CommuneController@edit");
 Route::get("/commune/delete/{id}", "CommuneController@delete");
@@ -155,3 +148,20 @@ Route::get("/payment-mood/edit/{id}", "PaymentMoodController@edit");
 Route::get("/payment-mood/delete/{id}", "PaymentMoodController@delete");
 Route::post("/payment-mood/save", "PaymentMoodController@save");
 Route::post("/payment-mood/update", "PaymentMoodController@update");
+// loan product
+Route::get('/loan-product', "LoanProductController@index");
+Route::get('/loan-product/create', "LoanProductController@create");
+Route::get('/loan-product/edit/{id}', "LoanProductController@edit");
+Route::get('/loan-product/delete/{id}', "LoanProductController@delete");
+Route::post('/loan-product/save', "LoanProductController@save");
+Route::post('/loan-product/update', "LoanProductController@update");
+// loan size
+Route::get('/loan-size', "LoanSizeController@index");
+Route::get('/loan-size/create', "LoanSizeController@create");
+Route::get('/loan-size/edit/{id}', "LoanSizeController@edit");
+Route::get('/loan-size/delete/{id}', "LoanSizeController@delete");
+Route::post('/loan-size/save', "LoanSizeController@save");
+Route::post('/loan-size/update', "LoanSizeController@update");
+
+// loan
+Route::get('/loan', "LoanController@index");

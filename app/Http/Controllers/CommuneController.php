@@ -48,7 +48,32 @@ class CommuneController extends Controller
              return redirect("/commune/create")->withInput();
          }
      }
-
+     public function edit($id)
+     {
+         $data['commune'] = DB::table('communes')->where('id', $id)->first();
+         $data['provinces'] = DB::table('provinces')->where('active',1)->get();
+         $data['districts'] = DB::table('districts')->where('active',1)->where('province_id', $data['commune']->province_id)->get();
+         return view('communes.edit', $data);
+     }
+     public function update(Request $r)
+     {
+        $data = array(
+            "code" => $r->code,
+            "name" => $r->name,
+            "province_id" => $r->province_id,
+            "district_id" => $r->district_id
+        );
+        $i = DB::table('communes')->where('id', $r->id)->update($data);
+        if($i)
+        {
+            $r->session()->flash('sms', 'All changes have been saved!');
+            return redirect('/commune/edit/'.$r->id);
+        }
+        else{
+            $r->session()->flash('sms1', 'Fail to save change!');
+            return redirect('/commune/edit/'.$r->id);
+        }
+     }
      public function delete($id)
      {
          $i = DB::table("communes")->where("id", $id)->update(["active"=>0]);
@@ -58,5 +83,9 @@ class CommuneController extends Controller
              return redirect('/commune?page='.$page);
          }
          return redirect('/commune');
+     }
+     public function get($id)
+     {
+         return DB::table('communes')->where('district_id', $id)->get();
      }
 }

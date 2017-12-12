@@ -5,14 +5,14 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header text-bold">
-                    <strong>Commune List</strong>&nbsp;&nbsp;
+                    <strong>Village List</strong>&nbsp;&nbsp;
                     <a href="{{url('/village/create')}}"><i class="fa fa-plus"></i> New</a>
                 </div>
                 <div class="card-block">
                     <table class="tbl">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>&numero;</th>
                             <th>Code</th>
                             <th>Name</th>
                             <th>Commune</th>                            

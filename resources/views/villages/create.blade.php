@@ -102,8 +102,10 @@
             $("#province_id").change(function(){
                 bindDistrict();
             });
+            $("#district_id").change(function(){
+                bindCommune();
+            });
         });
-
         function bindDistrict()
         {
              $.ajax({
@@ -118,6 +120,7 @@
                     }
                     $("#district_id").html(opt);
                     //$("#district_id").chosen();
+                    bindCommune();
                 }
             });
         }
@@ -126,7 +129,7 @@
         {
              $.ajax({
                 type: "GET",
-                url: burl + "/commune/get/"+ $("#district_id").val() + $("#province_id").val(),
+                url: burl + "/commune/get/"+ $("#district_id").val(),
                 success: function(sms)
                 {
                     var opt ="";
