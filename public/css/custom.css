@@ -20,6 +20,10 @@ ul#siderbar li.nav-item a.nav-link:hover{
 .sidebar{
     top: 32px;
 }
+
+.bg-inverse {
+    background-color: #2f4154!important;
+}
 .dropdown-menu{
     right: 9px!important;
     -webkit-border-radius: 0;
@@ -67,7 +71,7 @@ ul.pagination{
     margin-top: 9px;
 }
 ul.pagination li{
-    padding-lef: 4px;
+    padding-left: 4px;
     font-size: 13px;
     border: 1px solid #ddd;
 }
