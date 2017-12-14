@@ -1,5 +1,3 @@
-
-
 @extends("layouts.parameter")
 @section('content')
     <div class="row">
