@@ -162,6 +162,14 @@ Route::get('/loan-size/edit/{id}', "LoanSizeController@edit");
 Route::get('/loan-size/delete/{id}', "LoanSizeController@delete");
 Route::post('/loan-size/save', "LoanSizeController@save");
 Route::post('/loan-size/update', "LoanSizeController@update");
+// staff
+Route::get('/staff', "StaffController@index");
+Route::get('/staff/create', "StaffController@create");
+Route::get('/staff/edit/{id}', "StaffController@edit");
+Route::get('/staff/delete/{id}', "StaffController@delete");
+Route::get('/staff/detail/{id}', "StaffController@detail");
+Route::post('/staff/save', "StaffController@save");
+Route::post('/staff/update', "StaffController@update");
 
 // loan
 Route::get('/loan', "LoanController@index");

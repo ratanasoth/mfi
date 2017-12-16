@@ -82,7 +82,7 @@
                     <a class="nav-link" href="{{url('/branch')}}" id="branch">Branch</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/branch')}}" id="branch">Branch</a>
+                    <a class="nav-link" href="{{url('/staff')}}" id="staff">Staff</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/user')}}" id="user">User Account</a>
